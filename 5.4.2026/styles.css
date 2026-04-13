@@ -1,0 +1,255 @@
+:root {
+  --card-bg: #0d1b2a;
+  --card-border: #1e3a5f;
+  --header-accent: #4fc3f7;
+  --title-color: #e8f4fd;
+  --mission-label-color: #4fc3f7;
+  --badge-bg: #1e3a5f;
+  --badge-text: #4fc3f7;
+  --badge-border: #2d5a8e;
+  --planet-item-bg: #122033;
+  --planet-item-border: #1e3a5f;
+  --planet-item-featured-bg: #0e2d4a;
+  --planet-item-featured-border: #4fc3f7;
+  --mercury-color: #b0bec5;
+  --venus-color: #ffcc80;
+  --mars-color: #ef5350;
+  --jupiter-color: #ff8a65;
+  --planet-name-color: #cfd8dc;
+  --planet-stat-color: #78909c;
+  --tag-rocky-bg: #37474f;
+  --tag-rocky-text: #b0bec5;
+  --tag-hot-bg: #4e342e;
+  --tag-hot-text: #ffcc80;
+  --tag-gas-bg: #3e2723;
+  --tag-gas-text: #ff8a65;
+  --stat-value-color: #e8f4fd;
+  --stat-label-color: #546e7a;
+  --stat-divider-color: #1e3a5f;
+  --progress-track: #1e3a5f;
+  --progress-fill: #4fc3f7;
+  --progress-label-color: #78909c;
+  --progress-pct-color: #4fc3f7;
+  --btn-bg: #4fc3f7;
+  --btn-text: #0d1b2a;
+  --items-radius: 0.6rem;
+}
+
+body {
+  color: var(--planet-stat-color);
+  color: var(--title-color);
+  font-weight: bold;
+  padding-left: 32px;
+}
+
+.explorer-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  min-width: 500px;
+  display: grid;
+  gap: 1rem;
+}
+
+.card-header {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  /* background-color: red; */
+  display: grid;
+  gap: 0.25rem;
+}
+
+.mission-label {
+  /* background-color: green; */
+  color: var(--header-accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.25ch;
+}
+
+.card-title {
+  /* background-color: yellow; */
+  font-size: 1.25rem;
+}
+
+.orbit-badge {
+  background-color: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--items-radius);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.orbit-number {
+  /* background-color: red; */
+}
+
+.planets-grid {
+  /* background-color: grey; */
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+}
+
+.planet-item {
+  background-color: var(--planet-item-bg);
+  border: 1px solid var(--planet-item-border);
+  padding: 0.7rem;
+  border-radius: var(--items-radius);
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.planet-item.featured {
+  border-color: var(--planet-item-featured-border);
+  background-color: var(--planet-item-featured-bg);
+}
+
+.planet-visual {
+  /* background-color: red; */
+  height: 35px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.planet-visual.mercury {
+  background-color: var(--mercury-color);
+}
+
+.planet-visual.venus {
+  background-color: var(--venus-color);
+}
+
+.planet-visual.mars {
+  background-color: var(--mars-color);
+}
+
+.planet-visual.jupiter {
+  background-color: var(--jupiter-color);
+}
+
+.planet-info {
+  display: grid;
+  justify-items: center;
+}
+
+.planet-name {
+  font-size: 0.75rem;
+}
+
+.planet-stat {
+  font-size: 0.6rem;
+  color: var(--planet-stat-color);
+}
+
+.planet-tag {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  border-radius: 4px;
+  /* background-color: pink; */
+  padding: 0.1rem 0.3rem;
+}
+
+.planet-tag.rocky {
+  background-color: var(--tag-rocky-bg);
+  color: var(--tag-rocky-text);
+}
+
+.planet-tag.hot {
+  background-color: var(--tag-hot-bg);
+  color: var(--tag-hot-text);
+}
+
+.planet-tag.gas {
+  background-color: var(--tag-gas-bg);
+  color: var(--tag-gas-text);
+}
+
+.stats-row {
+  background-color: var(--planet-item-bg);
+  border-radius: var(--items-radius);
+  border: 1px solid var(--planet-item-border);
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.stat-block {
+  /* background: pink; */
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 0.7rem 1rem;
+}
+
+.stat-value {
+}
+
+.stat-label {
+  text-transform: uppercase;
+  color: var(--stat-label-color);
+  font-size: 0.6rem;
+}
+
+.stat-divider {
+  /* background-color: red; */
+  border-right: 1px solid var(--planet-item-border);
+  align-self: center;
+  height: 1.8rem;
+}
+
+.card-footer {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.progress-section {
+  /* background-color: pink; */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.progress-label {
+  color: var(--progress-label-color);
+  font-size: 0.7rem;
+}
+
+.progress-bar {
+  background-color: var(--progress-track);
+  height: 6px;
+  border-radius: 8px;
+}
+
+.progress-fill {
+  background-color: var(--progress-fill);
+  width: 74%;
+  height: 6px;
+  border-radius: 8px;
+}
+
+.progress-pct {
+  color: var(--progress-pct-color);
+  font-size: 0.725rem;
+}
+
+.launch-btn {
+  all: unset;
+  border-radius: 0.5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+}
