@@ -1,0 +1,154 @@
+:root {
+  --board-bg: #1a1f2e;
+  --board-border: #2e3650;
+  --header-bg: #0f1420;
+  --footer-bg: #0f1420;
+  --accent-blue: #3b82f6;
+  --text-primary: #e8ecf4;
+  --text-secondary: #8b95b0;
+  --flight-row-bg: #1e2436;
+  --flight-row-border: #2a3048;
+  --ontime-color: #22c55e;
+  --ontime-bg: #14532d;
+  --delayed-color: #f59e0b;
+  --delayed-bg: #451a03;
+  --boarding-color: #60a5fa;
+  --boarding-bg: #1e3a5f;
+  --cancelled-color: #f87171;
+  --cancelled-bg: #450a0a;
+  --gate-label-color: #6b7694;
+  --airport-code-color: #60a5fa;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  color: var(--text-primary);
+}
+
+.board {
+  background-color: var(--header-bg);
+  border-radius: 0.75rem;
+  min-width: 500px;
+}
+
+.board-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.airport-code {
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.125ch;
+}
+
+.board-time {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.flight-list {
+  border-block: 3px solid var(--board-border);
+  background-color: var(--board-bg);
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.flight-row {
+  border: 1px solid var(--board-border);
+  border-radius: 8px;
+  background-color: var(--flight-row-bg);
+  padding: 0.5rem 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3rem 1fr max-content max-content;
+  gap: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  align-items: center;
+}
+
+.flight-num {
+}
+
+.flight-dest {
+  color: var(--text-secondary);
+  font-weight: normal;
+}
+
+.flight-time {
+}
+
+.status-badge {
+  text-transform: uppercase;
+  min-width: 5.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  display: grid;
+  place-content: center;
+  padding: 0.2rem;
+}
+
+.status-ontime {
+  color: var(--ontime-color);
+  background-color: var(--ontime-bg);
+}
+
+.status-delayed {
+  color: var(--delayed-color);
+  background-color: var(--delayed-bg);
+}
+
+.status-boarding {
+  color: var(--boarding-color);
+  background-color: var(--boarding-bg);
+}
+
+.status-cancelled {
+  color: var(--cancelled-color);
+  background-color: var(--cancelled-bg);
+}
+
+.board-footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.gate-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gate-label {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+}
+
+.gate-value {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
