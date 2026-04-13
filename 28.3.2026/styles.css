@@ -1,0 +1,163 @@
+:root {
+  --card-bg: #1e1b2e;
+  --cover-bg: #6c47ff;
+  --cover-accent: #a78bfa;
+  --cover-circle: #7957fa;
+  --play-bg: #ffffff;
+  --play-color: #6c47ff;
+  --tag-bg: #6c47ff;
+  --tag-color: #ffffff;
+  --title-color: #f1eeff;
+  --show-color: #a78bfa;
+  --desc-color: #c4b8f0;
+  --track-bg: #3b3560;
+  --fill-color: #6c47ff;
+  --time-color: #7c6fa0;
+  --pill-bg: #2e2a45;
+  --pill-color: #c4b8f0;
+  --btn-bg: #6c47ff;
+  --btn-color: #ffffff;
+  --card-radius: 16px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.podcast-card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 500px;
+}
+
+.podcast-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.cover-art {
+  background: radial-gradient(
+    circle at 75% 25%,
+    var(--cover-circle) 50px,
+    var(--cover-bg) 0
+  );
+  border-radius: 0.75rem;
+  width: 90px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--cover-bg);
+  overflow: hidden;
+}
+
+.cover-art::before {
+}
+
+.play-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.podcast-meta {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+}
+
+.category-tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
+  padding: 0.2rem 0.45rem;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  letter-spacing: 0.15ch;
+}
+
+.episode-title {
+  color: var(--title-color);
+  font-size: 0.9rem;
+  /* background: pink; */
+}
+
+.show-name {
+  color: var(--show-color);
+  font-size: 0.75rem;
+}
+
+.episode-desc {
+  color: var(--desc-color);
+  font-size: 0.83rem;
+  padding-block: 0.5rem;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+.podcast-footer {
+}
+
+.progress-wrap {
+  padding-top: 0.25rem;
+  font-size: 0.75rem;
+  color: #525252;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.progress-bar {
+  background-color: var(--track-bg);
+  height: 4px;
+  border-radius: 2px;
+}
+
+.progress-fill {
+  width: 30%;
+  height: 4px;
+  background-color: var(--fill-color);
+  border-radius: 2px;
+}
+
+.time-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-actions {
+  padding-block-start: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-pill {
+  border-radius: 1rem;
+  background-color: var(--pill-bg);
+  color: var(--pill-color);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.subscribe-btn {
+  all: unset;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 0.825rem;
+  margin-inline-start: auto;
+}
