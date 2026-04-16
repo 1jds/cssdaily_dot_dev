@@ -1,0 +1,220 @@
+:root {
+  --card-bg: #1a1a2e;
+  --card-border: #2e2e50;
+  --header-bg: #16213e;
+  --label-color: #a78bfa;
+  --label-bg: #2d1f5e;
+  --room-color: #94a3b8;
+  --frame-bg: #0f3460;
+  --frame-border: #2e2e50;
+  --art-circle: #a78bfa;
+  --art-rect: #f472b6;
+  --art-triangle: #34d399;
+  --title-color: #f1f5f9;
+  --artist-color: #a78bfa;
+  --year-color: #64748b;
+  --desc-color: #94a3b8;
+  --tag-bg: #1e293b;
+  --tag-color: #a78bfa;
+  --tag-border: #2e2e50;
+  --footer-bg: #16213e;
+  --footer-border: #2e2e50;
+  --stat-value-color: #f1f5f9;
+  --stat-label-color: #64748b;
+  --btn-bg: #a78bfa;
+  --btn-color: #1a1a2e;
+}
+
+body {
+  padding-top: 22px;
+  padding-left: 19px;
+}
+
+.gallery-card {
+  background-color: var(--header-bg);
+  width: 498px;
+  border-radius: 1rem;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+}
+
+.gallery-label {
+  background-color: var(--label-bg);
+  color: var(--label-color);
+  font-size: 0.6rem;
+  letter-spacing: 0.275ch;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.gallery-room {
+  color: var(--room-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.artwork-display {
+  background-color: var(--card-bg);
+  border-block: 2px solid var(--card-border);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.artwork-frame {
+  background-color: var(--frame-bg);
+  /* width: 220px; */
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  border: 1px solid var(--frame-border);
+  position: relative;
+}
+
+.artwork-inner {
+}
+
+.art-shape {
+}
+
+.shape-circle {
+  position: absolute;
+  aspect-ratio: 1;
+  width: 60px;
+  background-color: var(--art-circle);
+  border-radius: 50%;
+  top: 19px;
+  left: 20px;
+  opacity: 0.8;
+}
+
+.shape-rect {
+  position: absolute;
+  height: 45px;
+  width: 55px;
+  background-color: var(--art-rect);
+  /* background-color: red; */
+  top: 83px;
+  left: 75px;
+  border-radius: 0.25rem;
+  opacity: 0.8;
+}
+
+.shape-triangle {
+  position: absolute;
+  height: 48px;
+  width: 55px;
+  background-color: var(--art-triangle);
+  /* background-color: red; */
+  top: 73px;
+  left: 48px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  opacity: 0.75;
+}
+
+.artwork-info {
+}
+
+.artwork-title {
+  color: var(--title-color);
+  font-size: 1.25rem;
+  margin-block: 0.32rem;
+}
+
+.artwork-artist {
+  color: var(--artist-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-block-end: 0.25rem;
+}
+
+.artwork-year {
+  color: var(--year-color);
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-block-end: 0.6rem;
+}
+
+.artwork-desc {
+  color: var(--desc-color);
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-block-end: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.035ch;
+}
+
+.artwork-tags {
+  /* background: red; */
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-color);
+  border: 1px solid var(--tag-border);
+  font-size: 0.625rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.gallery-footer {
+  display: flex;
+  padding: 0.7rem 1rem;
+  color: var(--title-color);
+  justify-content: space-between;
+  margin-inline-start: 2rem;
+}
+
+.footer-stat {
+  /* background: red; */
+  display: grid;
+  justify-items: center;
+  /* margin-top: -5px; */
+}
+
+.footer-stat:nth-child(1) {
+  transform: translate(1px, -1px);
+}
+
+.footer-stat:nth-child(2) {
+  /* margin-left: 0.875rem; */
+  /* margin-right: 1rem; */
+  transform: translate(10px, -1px);
+}
+
+.footer-stat:nth-child(3) {
+  /* background: pink; */
+  transform: translate(17px, -1px);
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 0.9rem;
+  /* margin-bottom: 4px; */
+}
+
+.stat-label {
+  color: var(--desc-color);
+  font-size: 0.6rem;
+}
+
+.enquire-btn {
+  all: unset;
+  border: 1px solid var(--btn-color);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.3rem;
+  border-radius: 0.5rem;
+  transform: translate(-2px, -1px);
+}
