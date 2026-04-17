@@ -1,0 +1,57 @@
+:root {
+  --bg-notification: #ffffff;
+  --text-title: #1a1a2e;
+  --text-subtitle: #6b7280;
+  --badge-bg: #ef4444;
+  --badge-text: #ffffff;
+  --border: #e5e7eb;
+  --icon-bg: #f3f4f6;
+}
+
+.notification {
+  background-color: var(--bg-notification);
+  width: 300px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border);
+  display: flex;
+  /* gap: 0.5rem; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  background: var(--icon-bg);
+  padding: 0.5rem 0.45rem;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.content {
+  display: grid;
+  gap: 0.1rem;
+  margin-left: -9px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: var(--text-title);
+}
+
+.subtitle {
+  color: var(--text-subtitle);
+  font-size: 0.75rem;
+}
+
+.badge {
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
+}
