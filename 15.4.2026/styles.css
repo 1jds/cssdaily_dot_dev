@@ -1,0 +1,148 @@
+:root {
+  --card-bg: #1a2740;
+  --card-header-bg: #1e3054;
+  --accent-blue: #4a9eff;
+  --accent-yellow: #ffd166;
+  --text-primary: #ffffff;
+  --text-secondary: #8ba3c7;
+  --divider-color: #2e4270;
+  --today-bg: #2e4a7a;
+  --today-border: #4a9eff;
+  --day-card-bg: #243352;
+  --stat-bg: #243352;
+  --high-temp: #ffffff;
+  --low-temp: #8ba3c7;
+  --border-radius-card: 16px;
+  --border-radius-day: 10px;
+  --border-radius-stat: 8px;
+}
+
+.forecast-card {
+  width: 500px;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--text-primary);
+  display: grid;
+  gap: 1rem;
+}
+
+.card-header {
+  background: var(--card-header-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.city {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.region {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.current-temp {
+  display: grid;
+  justify-items: center;
+}
+
+.temp-value {
+  color: var(--accent-yellow);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.temp-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.divider {
+  border-top: 1px solid var(--divider-color);
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--day-card-bg);
+  padding: 0.5rem;
+}
+
+.day-card.today {
+  background-color: var(--today-bg);
+  border: 1px solid var(--today-border);
+}
+
+.day-name {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.day-card.today .day-name {
+  color: var(--today-border);
+}
+
+.day-icon {
+  font-size: 1.5rem;
+}
+
+.day-high {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.day-low {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--stat-bg);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.stat-label {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-weight: bold;
+  font-size: 0.75rem;
+}
