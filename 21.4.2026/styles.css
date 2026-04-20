@@ -1,0 +1,141 @@
+:root {
+  --color-card-bg: #ffffff;
+  --color-header-bg: #2d6a4f;
+  --color-header-text: #ffffff;
+  --color-stall-number: #95d5b2;
+  --color-stall-name: #ffffff;
+  --color-badge-bg: #95d5b2;
+  --color-badge-text: #1b4332;
+  --color-divider: #e0e0e0;
+  --color-item-bg: #f8fdf9;
+  --color-item-featured-bg: #d8f3dc;
+  --color-item-featured-border: #52b788;
+  --color-item-border: #e8f5e9;
+  --color-produce-name: #2d3a2e;
+  --color-produce-price: #2d6a4f;
+  --color-footer-bg: #f0faf3;
+  --color-footer-border: #c8e6c9;
+  --color-dot-primary: #52b788;
+  --color-dot-accent: #f4a261;
+  --color-tag-text: #4a6741;
+  --color-hours-text: #7a9e7e;
+}
+
+body {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.market-card {
+  /* background: red; */
+  width: 460px;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-weight: bold;
+}
+
+.card-header {
+  background: var(--color-header-bg);
+  color: var(--color-header-text);
+  padding: 0.9rem 1.4rem 0.9rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+}
+
+.stall-number {
+  text-transform: uppercase;
+  color: var(--color-stall-number);
+  font-size: 0.75rem;
+}
+
+.stall-name {
+  font-size: 1.25rem;
+}
+
+.open-badge {
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  border-radius: 2rem;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+}
+
+.divider {
+}
+
+.produce-grid {
+  padding: 0.8rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-footer-border);
+}
+
+.produce-item {
+  background: var(--color-item-bg);
+  border: 1px solid var(--color-item-border);
+  border-radius: 0.75rem;
+  padding: 0.7rem;
+  display: grid;
+}
+
+.produce-item.featured {
+  background: var(--color-item-featured-bg);
+  border: 1px solid var(--color-item-featured-border);
+}
+
+.produce-icon {
+  font-size: 1.4rem;
+}
+
+.produce-name {
+  font-size: 0.75rem;
+  color: var(--color-produce-name);
+  margin-block-end: 0.4rem;
+}
+
+.produce-price {
+  font-size: 0.8rem;
+  color: var(--color-produce-price);
+}
+
+.card-footer {
+  background: var(--color-footer-bg);
+  border: 1px solid var(--color-footer-border);
+  border-radius: 0rem 0rem 1rem 1rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  font-size: 0.75rem;
+}
+
+.footer-tag {
+  color: var(--color-tag-text);
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.tag-dot {
+  display: block;
+  aspect-ratio: 1;
+  width: 8px;
+  border-radius: 50%;
+  background: var(--color-dot-primary);
+}
+
+.tag-dot.accent {
+  background: var(--color-dot-accent);
+}
+
+.footer-hours {
+  color: var(--color-hours-text);
+  margin-inline-start: auto;
+}
