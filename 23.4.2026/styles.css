@@ -1,0 +1,134 @@
+:root {
+  --bg-board: #1e1a14;
+  --bg-card: #2c2519;
+  --bg-featured: #3a2e1c;
+  --border-card: #4a3e2a;
+  --border-featured: #c9a84c;
+  --text-primary: #f0e6cc;
+  --text-secondary: #a8936a;
+  --text-day: #c9a84c;
+  --text-price: #f0e6cc;
+  --badge-pick-bg: #c9a84c;
+  --badge-pick-text: #1e1a14;
+  --badge-veg-bg: #3a5e3a;
+  --badge-veg-text: #a8d4a8;
+  --badge-fish-bg: #1e3a5e;
+  --badge-fish-text: #a8c8f0;
+  --badge-pop-bg: #5e2a2a;
+  --badge-pop-text: #f0a8a8;
+  --footer-text: #6e5e3e;
+  --tag-bg: #c9a84c;
+  --tag-text: #1e1a14;
+}
+
+body {
+  margin-left: 12px;
+}
+
+.board {
+  width: 518px;
+  background: var(--bg-board);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  padding: 1rem 1.25rem;
+  font-weight: bold;
+}
+
+.board-header {
+}
+
+.board-tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
+  letter-spacing: 0.1ch;
+}
+
+.board-title {
+  font-size: 1.5rem;
+  margin-block: 0.25rem 0.3rem;
+}
+
+.board-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  /* font-weight: normal; */
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-block: 1.2rem;
+}
+
+.special-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.special-card.featured {
+  background: var(--bg-featured);
+  border: 1px solid var(--border-featured);
+}
+
+.card-day {
+  color: var(--text-day);
+  font-size: 0.7rem;
+}
+
+.card-name {
+  font-size: 0.9rem;
+  margin-block: 0.2rem 0.3rem;
+}
+
+.card-desc {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin-block-end: 0.6rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-badge {
+  background: var(--badge-pick-bg);
+  color: var(--badge-pick-text);
+  font-size: 0.6rem;
+  border-radius: 1rem;
+  padding: 0.15rem 0.4rem;
+}
+
+.card-badge.veg {
+  background: var(--badge-veg-bg);
+  color: var(--badge-veg-text);
+}
+
+.card-badge.fish {
+  background: var(--badge-fish-bg);
+  color: var(--badge-fish-text);
+}
+
+.card-badge.pop {
+  background: var(--badge-pop-bg);
+  color: var(--badge-pop-text);
+}
+
+.card-price {
+}
+
+.board-footer {
+}
+
+.footer-note {
+  font-size: 0.75rem;
+}
